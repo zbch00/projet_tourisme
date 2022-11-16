@@ -1,11 +1,37 @@
 @startuml
-'https://plantuml.com/sequence-diagram
 
-autonumber
+class Etablissement {
+    nom : string
+    slug : string
+    description : text
+    num_tel : string
+    adresse_postal : string
+    ville : Ville
+    adresse_mail : string
+    image : string
+    actif : bool
+    accueil : bool
+    createdAt : date
+    updatedAt  : date
+    categorie : array
+}
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+class Ville {
+    nom : string
+    cp : string
+    nom_dep : string
+    num_dep : int
+    nom_region : string
+}
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+class Categorie {
+    nom : string
+    createdAt : date
+}
+
+
+Etablissement "0..*" -- "1..1" Ville
+Etablissement "0..*" -- "1..*" Categorie
+
+
 @enduml
