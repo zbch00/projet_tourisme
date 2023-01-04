@@ -42,6 +42,4 @@ class EtablissementController extends AbstractController
         ]);
     }
 
-
-
 }

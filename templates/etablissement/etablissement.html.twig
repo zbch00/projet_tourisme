@@ -6,8 +6,7 @@
     <h1 class="mt-5">Détails de l'établissement</h1>
     <div class="position-relative">
         <h2><a href="{{ path("app_etablissements") }}">{{ etablissement.nom }}</a></h2>
-        <p class="fst-italic">Crée le {{ etablissement.createdAt | date("d/m/Y") }}</p>
-        <img src="https://www.laclusaz.com/medias/images/prestations/multitailles/800x600_573055-1_exterieur_officiel.jpg" class="position-relative top-0 start-50 translate-middle-x" alt="image">
+        <img src="https://www.parchotel-alsace.com/fr/img/slideshow_xlarge/1070_main.jpeg" class="position-relative top-0 start-50 translate-middle-x" alt="image">
         <h3 class="m-4 form-control border-primary"> <b>Description : </b><br>{{ etablissement.description }}</h3>
         <h5 class="m-4"> Adresse : {{ etablissement.adressePostal}}</h5>
         <h5 class="m-4"> Ville : {{ etablissement.ville.nom}}</h5>
@@ -16,8 +15,8 @@
         {% for categorie in etablissement.categorie %}
             <h5 class="m-4"> Catégorie(s) : {{ categorie.nom}} </h5>
         {% endfor %}
-
-
     </div>
 
 {% endblock %}
+
+

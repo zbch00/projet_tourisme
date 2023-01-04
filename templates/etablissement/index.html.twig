@@ -9,7 +9,7 @@
         {% if etablissement.actif == 1 %}
         <div class="col">
             <div class="card">
-                <img src="https://www.laclusaz.com/medias/images/prestations/multitailles/800x600_573055-1_exterieur_officiel.jpg" class="card-img-top" alt="image">
+                <img src="https://www.parchotel-alsace.com/fr/img/slideshow_xlarge/1070_main.jpeg" class="card-img-top" alt="image">
                 <div class="card-body">
                     <h5 class="card-title"><a href="{{ path("app_etablissements") }}">{{ etablissement.nom }}</a></h5>
                     <p class="card-text">{{ etablissement.description | slice(0,75) }}</p>
@@ -18,7 +18,6 @@
                         <h6 class="m-4"> Catégorie(s) : {{ categorie.nom}} </h6>
                     {% endfor %}
                     <a  class="btn btn-primary" href="{{ path("app_etablissement_slug",{"slug": etablissement.slug}) }}">Détails</a>
-
                 </div>
             </div>
         </div>

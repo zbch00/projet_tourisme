@@ -29,6 +29,20 @@ class Categorie {
     createdAt : date
 }
 
+class Utilisateur {
+    prenom : string
+    nom : string
+    pseudo : string
+    email : string
+    password : string
+    createdAt : date
+    updatedUp : date
+    roles : array
+    actif : bool
+}
+
+
+
 
 Etablissement "0..*" -- "1..1" Ville
 Etablissement "0..*" -- "1..*" Categorie
