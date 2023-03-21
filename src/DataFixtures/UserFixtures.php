@@ -33,7 +33,7 @@ class UserFixtures extends Fixture
             $user->setEmail($faker->email());
             $hashPassword = $this->hasher->hashPassword(
                 $user,
-                $faker->password(8)
+                'boubou',
             );
             $user->setPassword($hashPassword);
             $user->setCreatedAt($faker->dateTimeBetween('-10 years'));
